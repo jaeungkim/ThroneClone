@@ -1,0 +1,343 @@
+/*
+
+GENERAL
+
+*/
+.section{
+    display: block;    
+}
+.container{
+    position: absolute;
+    top: 50%;;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; 
+}
+/*
+
+Video Background Section
+
+*/
+.background_section{
+    position: relative;
+    height: 460px;
+}
+.video_background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    max-width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.5);
+    object-fit: cover;
+    filter: brightness(50%);
+}
+.has-text-centered{
+    text-align: center!important;
+}
+.title{
+    font-size: 3.6rem;
+    color: white;
+    font-weight: 500;
+}
+.titles{
+    margin-top: 1em;
+}
+.thin{
+    font-weight: 500;
+}
+.watch_video{
+    cursor: pointer;
+    transition: color .2s ease;
+    text-align: center!important;
+    text-decoration: underline;
+    font-weight:500;
+    font-size: 1.15rem;
+    color: white;
+}
+.watch_video:hover{
+    color: white;
+}
+.buttons{
+    margin-top: 2em;
+}
+.button{
+    cursor: pointer;
+    display: inline-block;
+    padding: 1em 2em;
+    margin-top: 0.5em;
+    border-radius: 1em;
+    color: white;
+    transition: background-color .5s ease, border .2s ease;
+    background-color: #0e0e0e;
+    box-sizing: border-box;
+    font-family: "Visuelt Pro",sans-serif;
+    text-align: center;
+    text-decoration: none;
+}
+.button:hover{
+    color: white;
+    text-decoration: none;
+    background-color: #2c2c2c;
+}
+.button:visited{
+    color: white;
+    text-decoration: none;
+}
+.button:active{
+    color: white;
+    text-decoration: none;
+}
+.subscribe_section{
+    text-align: center;
+    color: #6b6b6b;
+    background-color: white;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.subscribe_detail{
+    color: #6b6b6b;
+}
+/*
+
+BLOG SECTION
+
+*/
+.blog_section{
+   padding: 0 5em;
+}
+.blog_column_heading{
+    padding: 0 35px;
+}
+.blog_margin{
+    margin: 10px 10px;
+}
+.blog_columns{
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.blog_column{
+    flex: 50%;
+    max-width: 50%;
+}
+  @media screen and (max-width: 800px) {
+    .blog_section{
+        padding: 0;
+    }
+    .blog_column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+.blog_image-tile_wrapper .blog_image_tile{
+    height: 19rem;
+    background-color: transparent;
+    z-index: 0;
+    transition: all;
+}
+.blog_image-tile_wrapper .blog_image_tile .background-image{
+    z-index: 1;
+    background-position: center;
+    background-size: cover;
+    transform: scale(1);
+    transition: all .25s;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(80%);
+}
+.blog_image-tile_wrapper .blog_image_tile .background-image:hover{
+    transform: scale(1.2);
+}
+.blog_image-tile_wrapper .blog_image_tile .overlay{
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    
+}
+.blog_image-tile_wrapper .blog_image_tile .overlay .overlay-content{
+    position: absolute;
+    top: 1.78rem;
+    left: 2.14rem;
+    transition: all .25s;
+    z-index: 2;
+}
+.tag{
+    font-size: .85rem!important;
+    align-items: center;
+    border-radius: .21rem;
+    display: inline-flex;
+    height: 2em;
+    justify-content: center;
+    line-height: 1.5;
+    padding-left: .75em;
+    padding-right: .75em;
+    white-space: nowrap;
+}
+.blog_image_tile{
+    position: relative;
+    border-radius: .57rem;
+    overflow: hidden;
+    color: white;
+}
+.blog_columns:after {
+    content:"";
+    display: table;
+    clear:both;
+}
+.tile-titles{
+    position: absolute;
+    z-index: 3;
+    bottom: 1.78rem;
+    left: 2.14rem;
+    right: 2.1rem;
+}
+/*
+
+SMALL BLOG SECTION
+
+*/
+.small_blog_section{
+    padding: 0 5em;
+}
+.small_blog_column_heading{
+    padding: 0 35px;
+}
+.small_blog_columns{
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.small_blog_column{
+    flex: 33.33%;
+    max-width: 33.33%;
+}
+@media screen and (max-width: 800px) {
+    .small_blog_section{
+        padding: 0;
+    }
+    .small_blog_column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+.small_blog_columns:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.small_blog_image_tile{
+    position: relative;
+    border-radius: .57rem;
+    overflow: hidden;
+    color: white;
+}
+.small_blog_image_wrapper .small_blog_image_tile{
+    height: 13rem;
+    background-color: transparent;
+    z-index: 0;
+    transition: all;
+}
+.small_blog_image_wrapper .small_blog_image_tile .small_background_image{
+    z-index: 1;
+    background-position: center;
+    background-size: cover;
+    transform: scale(1);
+    transition: all .25s;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(80%);
+}
+.small_blog_image_wrapper .small_blog_image_tile .small_background_image:hover{
+    transform: scale(1.2);
+}
+.titles{
+    text-decoration: none!important;
+    color: black;
+    margin: 0 13px;
+}
+/*
+
+EXTRA SMALL BLOG SECTION
+
+*/
+.extrasmall_blog_section{
+    padding: 0 5em;
+}
+.extrasmall_blog_column_heading{
+    padding: 0 35px;
+}
+.extrasmall_blog_columns{
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.extrasmall_blog_column{
+    flex: 25%;
+    max-width: 25%;
+}
+@media screen and (max-width: 800px) {
+    .extrasmall_blog_section{
+        padding: 0;
+    }
+
+    .extrasmall_blog_column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+.extrasmall_blog_columns:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.extrasmall_blog_image_tile{
+    position: relative;
+    border-radius: .57rem;
+    overflow: hidden;
+    color: white;
+}
+.extrasmall_blog_image_wrapper .extrasmall_blog_image_tile{
+    height: 13rem;
+    background-color: transparent;
+    z-index: 0;
+    transition: all;
+}
+.extrasmall_blog_image_wrapper .extrasmall_blog_image_tile .extrasmall_background_image{
+    z-index: 1;
+    background-position: center;
+    background-size: cover;
+    transform: scale(1);
+    transition: all .25s;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(80%);
+}
+.extrasmall_blog_image_wrapper .extrasmall_blog_image_tile .extrasmall_background_image:hover{
+    transform: scale(1.2);
+}
+.esm_tile-big-icon{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 3.57143rem;
+    text-align: center;
+}
